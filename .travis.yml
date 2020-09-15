@@ -1,12 +1,10 @@
 language: csharp
-mono: latest
+solution: DigitalWorkSpace.sln
+mono: none
 dotnet: 3.1
 solution: DigitalWorkSpace.sln
-before_install:
-  - cd Src
 install:
-  - nuget restore DigitalWorkSpace/DigitalWorkSpace.sln
-  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+  - dotnet restore DigitalWorkSpace\DigitalWorkSpace.sln
 script:
-  - dotnet restore
-  - dotnet test
+  - dotnet build DigitalWorkSpace\DigitalWorkSpace.sln
+  - dotnet test DigitalWorkSpace\DigitalWorkSpace.sln
