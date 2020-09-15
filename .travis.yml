@@ -10,4 +10,4 @@ install:
 script:
   - dotnet restore
   - msbuild /p:Configuration=Release DigitalWorkSpace/DigitalWorkSpace.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DigitalWorkSpace/CatalogManaging.Tests/bin/Release/CatalogManaging.Tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DigitalWorkSpace/CatalogManaging.Tests/bin/Release/netcoreapp3.1/CatalogManaging.Tests.dll
