@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CatalogManaging</name>
+    </assembly>
+    <members>
+        <member name="M:CatalogManaging.Controllers.AdminsController.AddAdmin(CatalogManaging.Model.AdminDto,System.Int32)">
+            <summary>
+            Add user as admin to the given catalog
+            Only admin of the catalog can perform this action
+            </summary>
+            <param name="adminAddDto">Detail of the user to be added and admin who is adding the user</param>
+            <param name="catalogId">Catalog id to which the user needs to be added as admin</param>
+            <returns>An Action result of type Admin</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.AdminsController.GetAdmin(System.Int32)">
+            <summary>
+            Get all admins of the given catalog id
+            </summary>
+            <param name="catalogId"></param>
+            <returns>An Action result with the list of Admin</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.AdminsController.DeleteAdmin(CatalogManaging.Model.AdminDto,System.Int32)">
+            <summary>
+            Delete admin from the catalog 
+            Only admin of the catalog can perform this action
+            </summary>
+            <param name="adminDeleteDto">Details of the user who needs to be deleted and the admin who is performing the deletion</param>
+            <param name="catalogId"></param>
+            <returns>Action result of type boolean</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CardsController.AddCards(System.Collections.Generic.IEnumerable{CatalogManaging.Model.CardDto},System.Int32)">
+            <summary>
+            Add cards to Catalog
+            Only admin of the catalog can perform this action
+            </summary>
+            <param name="cardCreationDtos">Cards detail</param>
+            <param name="catalogId">Catalog id to which the cards needs to be added</param>
+            <returns>An action result with a list of cards added</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CardsController.GetCards(System.Int32)">
+            <summary>
+            Get all cards which belong give catalog
+            </summary>
+            <param name="catalogId"></param>
+            <returns>An action result with a list of cards</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CardsController.DeleteCard(System.Collections.Generic.IEnumerable{CatalogManaging.Model.CardDto},System.Int32)">
+            <summary>
+            Delete card from the given catalog
+            Only admin of the catalog can perform this action
+            </summary>
+            <param name="cardDeletionDto"></param>
+            <param name="catalogId">Catalog id from which cards needs to be deleted</param>
+            <returns></returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CardsController.EditCard(System.Collections.Generic.IEnumerable{CatalogManaging.Model.CardDto},System.Int32)">
+            <summary>
+            Edit the card by replacing older version of card with the newer vesion
+            Only admin of the catalog can perform this action
+            </summary>
+            <param name="cardEditDto">Details of the Edited card</param>
+            <param name="catalogId">Catalog whose card needs to be edited</param>
+            <returns></returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CardsController.GetCard(System.Int32,System.Int32)">
+            <summary>
+            Get cards from catalog based on its id
+            </summary>
+            <param name="catalogId">Catalog id from which the card's details are required</param>
+            <param name="id">card id</param>
+            <returns></returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CatalogsController.GetCatalogs">
+            <summary>
+            Get all the existing Catalogs
+            </summary>
+            <returns>An Action result containing list of catalog</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CatalogsController.CreateCatalog(CatalogManaging.Model.CatalogCreationDto)">
+            <summary>
+            Creates a Catalog
+            creater will be the admin
+            </summary>
+            <param name="catalogCreationDto">Details of the Catalog to be created along with creater information </param>
+            <returns>An action result of type Catalog</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CatalogsController.GetApprovalPendingCards(System.Int32)">
+            <summary>
+            Gets the edited cards awaiting approval from admin
+            </summary>
+            <param name="id">Catalog Id</param>
+            <returns>An Action Result of list of Pending Card</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CatalogsController.GetCatalog(System.Int32)">
+            <summary>
+            Get catalog by its ID
+            </summary>
+            <param name="id">Catlog Id</param>
+            <returns>An Action Result of type Catalog</returns>
+        </member>
+        <member name="M:CatalogManaging.Controllers.CatalogsController.RejectEditedCard(System.Collections.Generic.IEnumerable{CatalogManaging.Model.CardDto},System.Int32)">
+            <summary>
+            Reject the edit on the card for the catalog
+            Only admin of the catalog can perform this action
+            </summary>
+            <param name="cardEditDto">Edited card's details</param>
+            <param name="id">Catalog Id</param>
+            <returns>Returns true on success</returns>
+        </member>
+        <member name="T:CatalogManaging.Model.AdminDto">
+            <summary>
+            Input for adding or deleting the admin
+            </summary>
+        </member>
+        <member name="P:CatalogManaging.Model.AdminDto.AdminId">
+            <summary>
+            Admin who is performing the action 
+            </summary>
+        </member>
+        <member name="P:CatalogManaging.Model.AdminDto.UserId">
+            <summary>
+            User who needs to be added as admin
+            </summary>
+        </member>
+        <member name="T:CatalogManaging.Model.CardDto">
+            <summary>
+            Input for adding or deleting card from catalog
+            </summary>
+        </member>
+        <member name="P:CatalogManaging.Model.CardDto.UserId">
+            <summary>
+            User who is perfroming the action 
+            </summary>
+        </member>
+        <member name="P:CatalogManaging.Model.CardDto.CardId">
+            <summary>
+            Card id which needs to be added 
+            </summary>
+        </member>
+        <member name="P:CatalogManaging.Model.CardDto.CardVersion">
+            <summary>
+            Version of the card
+            </summary>
+        </member>
+        <member name="T:CatalogManaging.Model.CatalogCreationDto">
+            <summary>
+            Input for creating a Catalog
+            </summary>
+        </member>
+        <member name="P:CatalogManaging.Model.CatalogCreationDto.UserId">
+            <summary>
+            User performing the action 
+            </summary>
+        </member>
+        <member name="P:CatalogManaging.Model.CatalogCreationDto.CatalogName">
+            <summary>
+            Name of the catalog
+            </summary>
+        </member>
+    </members>
+</doc>
