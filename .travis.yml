@@ -5,9 +5,9 @@ solution: DigitalWorkSpace.sln
 before_install:
   - cd Src
 install:
-  - nuget restore DigitalWorkSpace.sln
+  - nuget restore DigitalWorkSpace/DigitalWorkSpace.sln
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
   - dotnet restore
-  - msbuild /p:Configuration=Release DigitalWorkSpace.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./CatalogManaging.Tests/bin/Release/CatalogManaging.Tests.dll
+  - msbuild /p:Configuration=Release DigitalWorkSpace/DigitalWorkSpace.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DigitalWorkSpace/CatalogManaging.Tests/bin/Release/CatalogManaging.Tests.dll
