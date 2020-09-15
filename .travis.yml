@@ -3,6 +3,8 @@ solution: DigitalWorkSpace.sln
 mono: none
 dotnet: 3.1
 solution: DigitalWorkSpace.sln
+before_install:
+  - cd Src
 install:
   - dotnet restore DigitalWorkSpace\DigitalWorkSpace.sln
 script:
