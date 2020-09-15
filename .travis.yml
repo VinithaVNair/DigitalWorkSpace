@@ -2,11 +2,10 @@ language: csharp
 solution: DigitalWorkSpace.sln
 mono: none
 dotnet: 3.1
-solution: DigitalWorkSpace.sln
 before_install:
   - cd Src
 install:
-  - dotnet restore DigitalWorkSpace\DigitalWorkSpace.sln
+  - dotnet restore DigitalWorkSpace/DigitalWorkSpace.sln
 script:
-  - dotnet build DigitalWorkSpace\DigitalWorkSpace.sln
-  - dotnet test DigitalWorkSpace\DigitalWorkSpace.sln
+  - dotnet build DigitalWorkSpace/DigitalWorkSpace.sln
+  - dotnet test DigitalWorkSpace/DigitalWorkSpace.sln
