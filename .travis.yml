@@ -1,0 +1,13 @@
+language: csharp
+mono: latest
+dotnet: 3.1.200
+solution: DigitalWorkSpace.sln
+before_install:
+  - cd src
+install:
+  - nuget restore DigitalWorkSpace.sln
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - dotnet restore
+  - msbuild /p:Configuration=Release DigitalWorkSpace.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./CatalogManaging.Tests/bin/Release/CatalogManaging.Tests.dll
