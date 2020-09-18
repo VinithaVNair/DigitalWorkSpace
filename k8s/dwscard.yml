@@ -1,0 +1,82 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: carddbcontainer
+  spec:
+    ports:
+    - name: "8083"
+      port: 8083
+      targetPort: 80
+    - name: "44385"
+      port: 44385
+      targetPort: 443
+    selector:
+      app: carddbcontainer
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: carddbcontainer
+  spec:
+    ports:
+    - name: "3309"
+      port: 3309
+      targetPort: 3306
+    selector:
+      app: carddbcontainer
+  status:
+    loadBalancer: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: cardscontainer
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: cardscontainer
+    template:
+      metadata:
+        labels:
+          app: cardscontainer
+      spec:
+        containers:
+        - image: practicecr.azurecr.io/dws/cards
+          name: cardscontainer
+          ports:
+          - containerPort: 80
+          - containerPort: 443
+          resources: {}
+        restartPolicy: Always
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: carddbcontainer
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: carddbcontainer
+    template:
+      metadata:
+        labels:
+          app: carddbcontainer
+      spec:
+        containers:
+        - env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: root
+          image: practicecr.azurecr.io/dws/carddb
+          name: carddbcontainer
+          ports:
+          - containerPort: 3306
+          resources: {}
+        restartPolicy: Always
+  status: {}
+kind: List
+metadata: {}
+

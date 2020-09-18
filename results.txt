@@ -1,0 +1,127 @@
+{
+  "id": "/subscriptions/34f83551-7af8-4d1f-823c-a808d5275bb8/resourceGroups/myResourceGroup",
+  "location": "eastus",
+  "managedBy": null,
+  "name": "myResourceGroup",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+
+AAD role propagation done[############################################]  100.0000%{
+  "aadProfile": null,
+  "addonProfiles": {
+    "KubeDashboard": {
+      "config": null,
+      "enabled": true,
+      "identity": null
+    },
+    "httpApplicationRouting": {
+      "config": {
+        "HTTPApplicationRoutingZoneName": "5c62ba20e844443081f7.eastus.aksapp.io"
+      },
+      "enabled": true,
+      "identity": null
+    },
+    "omsagent": {
+      "config": {
+        "logAnalyticsWorkspaceResourceID": "/subscriptions/34f83551-7af8-4d1f-823c-a808d5275bb8/resourcegroups/defaultresourcegroup-eus/providers/microsoft.operationalinsights/workspaces/defaultworkspace-34f83551-7af8-4d1f-823c-a808d5275bb8-eus"
+      },
+      "enabled": true,
+      "identity": null
+    }
+  },
+  "agentPoolProfiles": [
+    {
+      "availabilityZones": null,
+      "count": 1,
+      "enableAutoScaling": null,
+      "enableNodePublicIp": false,
+      "maxCount": null,
+      "maxPods": 110,
+      "minCount": null,
+      "mode": "System",
+      "name": "nodepool1",
+      "nodeLabels": {},
+      "nodeTaints": null,
+      "orchestratorVersion": "1.17.9",
+      "osDiskSizeGb": 128,
+      "osType": "Linux",
+      "provisioningState": "Succeeded",
+      "scaleSetEvictionPolicy": null,
+      "scaleSetPriority": null,
+      "spotMaxPrice": null,
+      "tags": null,
+      "type": "VirtualMachineScaleSets",
+      "vmSize": "Standard_DS2_v2",
+      "vnetSubnetId": null
+    }
+  ],
+  "apiServerAccessProfile": null,
+  "autoScalerProfile": null,
+  "diskEncryptionSetId": null,
+  "dnsPrefix": "myAKSClust-myResourceGroup-34f835",
+  "enablePodSecurityPolicy": null,
+  "enableRbac": true,
+  "fqdn": "myaksclust-myresourcegroup-34f835-96ad374c.hcp.eastus.azmk8s.io",
+  "id": "/subscriptions/34f83551-7af8-4d1f-823c-a808d5275bb8/resourcegroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myAKSCluster",
+  "identity": null,
+  "identityProfile": null,
+  "kubernetesVersion": "1.17.9",
+  "linuxProfile": {
+    "adminUsername": "azureuser",
+    "ssh": {
+      "publicKeys": [
+        {
+          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD29GNfY9WUPovmbJtGd8HCj3aa9rELMJS+SwoY6R5hjngjj6ZjBzVkIkb5y/Nx8OvCoReeaEZvNOkIoxl8UF825D+sv8iB4k5za/5Y95vFDg/MjoJK1Zz5NuBlvKSmuo8d/bixk5YXzt198FVCXsGJYOZGmkaXKSZxtNa40FMdMgVDM66T2XzYV+FC9UCeBOI2vxmMDvoTrEUiUyQ2q2z9ECw0VHj2eNSOUaNBQ0B6afVKnUtbPR+y+gKaKUgdsCsvvBf6H/hVE8jTfMm+j/DYvsDnfQR3vzfuc58z/QF0zwlSUVtTpIC7UuINcmhDdJhOPxU3QoREufX94NBZp/sP"
+        }
+      ]
+    }
+  },
+  "location": "eastus",
+  "maxAgentPools": 10,
+  "name": "myAKSCluster",
+  "networkProfile": {
+    "dnsServiceIp": "10.0.0.10",
+    "dockerBridgeCidr": "172.17.0.1/16",
+    "loadBalancerProfile": {
+      "allocatedOutboundPorts": null,
+      "effectiveOutboundIps": [
+        {
+          "id": "/subscriptions/34f83551-7af8-4d1f-823c-a808d5275bb8/resourceGroups/MC_myResourceGroup_myAKSCluster_eastus/providers/Microsoft.Network/publicIPAddresses/d331f2f6-7226-49f6-9ac6-d466eba581a2",
+          "resourceGroup": "MC_myResourceGroup_myAKSCluster_eastus"
+        }
+      ],
+      "idleTimeoutInMinutes": null,
+      "managedOutboundIps": {
+        "count": 1
+      },
+      "outboundIpPrefixes": null,
+      "outboundIps": null
+    },
+    "loadBalancerSku": "Standard",
+    "networkMode": null,
+    "networkPlugin": "kubenet",
+    "networkPolicy": null,
+    "outboundType": "loadBalancer",
+    "podCidr": "10.244.0.0/16",
+    "serviceCidr": "10.0.0.0/16"
+  },
+  "nodeResourceGroup": "MC_myResourceGroup_myAKSCluster_eastus",
+  "privateFqdn": null,
+  "provisioningState": "Succeeded",
+  "resourceGroup": "myResourceGroup",
+  "servicePrincipalProfile": {
+    "clientId": "c037cf5f-1328-453c-b5a0-80c4c0030e84",
+    "secret": null
+  },
+  "sku": {
+    "name": "Basic",
+    "tier": "Free"
+  },
+  "tags": null,
+  "type": "Microsoft.ContainerService/ManagedClusters",
+  "windowsProfile": null
+}
