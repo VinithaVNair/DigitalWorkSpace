@@ -1,0 +1,23 @@
+<nav class="navbar fixed-top navbar-dark bg-dark" style="margin-right: 100px;margin-left: 50px;">
+   
+  <a class="nav-item">
+      <a class="nav-link font-weight-bold" routerLink="/home">Home</a>
+  </a>
+</nav>
+<div *ngIf='!tinyUrl' class="dscontainer" >
+    <h1 style="margin-left: 75px;">Enter Url Details </h1>
+    <div class="input-group">
+        <input type="text" style="margin-left: 5px; margin-right: 15px;" class="form-control" placeholder="Original Url" [(ngModel)]="url"/>
+      </div>
+     <div class="input">
+       <label id="customLabel">Expiry Date:</label>
+       <input class="form-control" placeholder="Expiry (dd-MM-yyyy)" ngbDatepicker #d="ngbDatepicker" #c="ngModel" [(ngModel)]="expiry" (focus)="d.toggle()"/>
+       </div>
+     </div>
+    <button *ngIf='!tinyUrl' class='btn btn-primary'  id="btnApply" (click)="CreateUrl()">Create Short Url</button>    
+
+  
+  <div class='dscontainer'
+  *ngIf='tinyUrl'>
+    <h1>Short url created {{shortUrl}}</h1>
+  </div>

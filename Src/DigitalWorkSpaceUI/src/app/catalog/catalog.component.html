@@ -1,0 +1,36 @@
+<nav class="navbar fixed-top navbar-dark bg-dark" style="margin-right: 100px;margin-left: 50px;">
+   
+    <a class="nav-item">
+        <a class="nav-link font-weight-bold" routerLink="/home">Home</a>
+    </a>
+    <a class="nav-item dropdown" *ngIf='isAdmin'>
+      <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Settings
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" (click)="addCards()">Add Cards</a>
+        <a class="dropdown-item" (click)="removeCards()">Remove Cards</a>
+        <a class="dropdown-item" (click)="addAdmin()">Add Admin</a>
+        <a class="dropdown-item" (click)="removeAdmin()">Remove Admin</a>
+        <div class="dropdown-divider"></div>
+      </div>
+  </a>
+  </nav>
+  <button *ngIf='isAdmin' type="button" class="btn btn-primary" (click)="actionOnCards()" style="margin-top: 40px; margin-left: 1000px;">
+    Pending Approval <span class="badge badge-light">{{cardsPendingApproval.length}}</span>
+  </button>
+  <div class="card-group" style="margin-top: 10px; border: navy;border-style: groove;"
+  *ngIf='cards && cards.length'>
+  <div style="margin-top: 5px;" *ngFor='let card of cards'>
+    <div class="col-sm-6 col-lg-4">
+    <app-card [card]="card"></app-card>
+    </div>
+  </div>
+ </div>
+ <div style="margin-top: 20px;">
+ 
+</div>
+ <div *ngIf='delete'>
+ <app-card-link [inputCard]= "cards"></app-card-link>
+</div>
+

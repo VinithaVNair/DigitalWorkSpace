@@ -1,0 +1,17 @@
+<nav class="navbar fixed-top navbar-dark bg-dark" style="margin-right: 100px;margin-left: 50px;">
+   
+    <a class="nav-item">
+        <a class="nav-link font-weight-bold" routerLink="/home">Home</a>
+    </a>
+  </nav>
+  <h1>Select the Cards to be approved for Edit</h1>
+  <div class="card-group" style="margin-top: 100px;">
+  <div *ngFor='let card of cards'>
+    <div class="col-sm-6 col-lg-4">
+    <app-linkedcard (selected)="selected($event)" (unSelected)="unSelected($event)" [card]="card"></app-linkedcard>
+    </div>
+  </div>
+</div>
+<button class='btn btn-primary'  id="btnApply" (click)="approve()">Approve Edits</button>
+<button class='btn btn-primary'  id="btnApply" (click)="reject()">Reject Edits</button>
+

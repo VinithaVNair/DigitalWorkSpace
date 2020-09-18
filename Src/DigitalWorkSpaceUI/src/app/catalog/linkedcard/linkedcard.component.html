@@ -1,0 +1,14 @@
+<div>
+    <div class="card" style="height: 15rem; width: 15rem;" *ngIf='card'>
+      <img [src]='sanitzedImageData' style="width: 4rem;" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"style="font-size: 1rem" >{{card.title}}</h5>
+        <p class="card-text" style="font-size: 1rem">{{card.description}}</p>
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" (click)= "changeListener()" aria-label="Checkbox for following text input">
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>

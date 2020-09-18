@@ -1,0 +1,6 @@
+{
+    "tinyUrl":"http://localhost:8081/tinyurls",
+    "cards":"http://localhost:8083/cards",    
+    "catalogs":"http://localhost:8084/catalogs",
+    "users":"http://localhost:8082/users"
+}

@@ -1,0 +1,14 @@
+<nav class="navbar fixed-top navbar-dark bg-dark" style="margin-right: 100px;margin-left: 50px;">
+   
+    <a class="nav-item">
+        <a class="nav-link font-weight-bold" routerLink="/home">Home</a>
+    </a>
+  </nav>
+  <div class="dscontainer" >
+    <h1 style="margin-left: 75px;">Enter User information </h1>
+    <div class="input-group">
+        <input type="text" style="margin-left: 5px; margin-right: 15px;" class="form-control" placeholder="Enter the Email Address" [(ngModel)]="userName"/>
+      </div>
+      <button  class='btn btn-primary'  id="btnApply" (click)="alter()">{{action}}</button>  
+    </div>
+    <div>{{message}}</div>

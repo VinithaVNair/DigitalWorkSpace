@@ -1,0 +1,22 @@
+<nav class="navbar fixed-top navbar-dark bg-dark" style="margin-right: 100px;margin-left: 50px;">
+   
+    <a class="nav-item">
+        <a class="nav-link font-weight-bold" routerLink="/home">Home</a>
+    </a>
+  </nav>
+  <div class="dscontainer" >
+      <h1 style="margin-left: 275px;">Edit card details</h1>
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Image</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" (change)="changeListener($event)">
+       
+      </div>
+    <div class="input-group">
+    <!-- *ngIf='urls'> -->
+        <input type="text" class="form-control" name="titlebox" placeholder="Title" [(ngModel)]="title"/>
+        <div class="form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1"  name="description" rows="3" [(ngModel)]="description" ></textarea>
+        </div>
+    </div>
+    <button class='btn btn-primary btn-lg'  id="btnApply" (click)="save()" style="margin-left: 475px;">Save</button>
