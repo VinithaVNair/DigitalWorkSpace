@@ -3,13 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogManaging.Core", "Catalog.Core\CatalogManaging.Core.csproj", "{D67A17D1-DA20-4177-B153-63175DE5892F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogManaging.Core", "Catalog\Catalog.Core\CatalogManaging.Core.csproj", "{D67A17D1-DA20-4177-B153-63175DE5892F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogManaging.Infrastructure", "Catalog.Infrastructure\CatalogManaging.Infrastructure.csproj", "{409A9153-CA45-4C5E-BDC8-3264482A2B15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogManaging.Infrastructure", "Catalog\Catalog.Infrastructure\CatalogManaging.Infrastructure.csproj", "{409A9153-CA45-4C5E-BDC8-3264482A2B15}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogManaging", "CatalogManaging\CatalogManaging.csproj", "{E8879EB2-6498-4569-8559-FD6728E7C000}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogManaging", "Catalog\CatalogManaging\CatalogManaging.csproj", "{E8879EB2-6498-4569-8559-FD6728E7C000}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogManaging.Tests", "CatalogManaging.Tests\CatalogManaging.Tests.csproj", "{886920B8-7487-432C-8EE6-10F461450BA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogManaging.Tests", "Catalog\CatalogManaging.Tests\CatalogManaging.Tests.csproj", "{886920B8-7487-432C-8EE6-10F461450BA1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardManaging", "Card\CardManaging\CardManaging.csproj", "{188A08B3-80A1-46F5-820B-23D96E50E9EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlManaging", "TinyUrl\TinyUrl\UrlManaging.csproj", "{802CCEA5-44D2-4849-920E-0D7A5D8B440B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManaging", "User\UserManaging\UserManaging.csproj", "{166AE180-011A-4220-931D-9189F6B3563D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardManaging.Tests", "Card\CardManaging.Tests\CardManaging.Tests.csproj", "{8E102F10-FA35-4845-B376-1BB9147D0070}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateWay", "ApiGateWay", "{27FCEFF4-1142-42FF-843A-2191B54D22F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitalWsApiGateway", "ApiGateWay\DigitalWsApiGateway\DigitalWsApiGateway.csproj", "{550A32DB-0263-4319-ABC6-4FD5EAD05BBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlManaging.Tests", "TinyUrl\UrlManaging.Tests\UrlManaging.Tests.csproj", "{E92FECD0-0FD0-4D70-B9F7-85E0DFB07730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManaging.Tests", "User\UserManaging.Tests\UserManaging.Tests.csproj", "{A75971EA-400B-4137-AEEB-6FB90C3EAEBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +49,40 @@ Global
 		{886920B8-7487-432C-8EE6-10F461450BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{886920B8-7487-432C-8EE6-10F461450BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{886920B8-7487-432C-8EE6-10F461450BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188A08B3-80A1-46F5-820B-23D96E50E9EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188A08B3-80A1-46F5-820B-23D96E50E9EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188A08B3-80A1-46F5-820B-23D96E50E9EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188A08B3-80A1-46F5-820B-23D96E50E9EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{802CCEA5-44D2-4849-920E-0D7A5D8B440B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{802CCEA5-44D2-4849-920E-0D7A5D8B440B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{802CCEA5-44D2-4849-920E-0D7A5D8B440B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{802CCEA5-44D2-4849-920E-0D7A5D8B440B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166AE180-011A-4220-931D-9189F6B3563D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166AE180-011A-4220-931D-9189F6B3563D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166AE180-011A-4220-931D-9189F6B3563D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166AE180-011A-4220-931D-9189F6B3563D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E102F10-FA35-4845-B376-1BB9147D0070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E102F10-FA35-4845-B376-1BB9147D0070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E102F10-FA35-4845-B376-1BB9147D0070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E102F10-FA35-4845-B376-1BB9147D0070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550A32DB-0263-4319-ABC6-4FD5EAD05BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550A32DB-0263-4319-ABC6-4FD5EAD05BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550A32DB-0263-4319-ABC6-4FD5EAD05BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550A32DB-0263-4319-ABC6-4FD5EAD05BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E92FECD0-0FD0-4D70-B9F7-85E0DFB07730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92FECD0-0FD0-4D70-B9F7-85E0DFB07730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92FECD0-0FD0-4D70-B9F7-85E0DFB07730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92FECD0-0FD0-4D70-B9F7-85E0DFB07730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A75971EA-400B-4137-AEEB-6FB90C3EAEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75971EA-400B-4137-AEEB-6FB90C3EAEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75971EA-400B-4137-AEEB-6FB90C3EAEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75971EA-400B-4137-AEEB-6FB90C3EAEBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{550A32DB-0263-4319-ABC6-4FD5EAD05BBD} = {27FCEFF4-1142-42FF-843A-2191B54D22F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50E69888-7746-4F48-ABF7-B100B2B64AA5}

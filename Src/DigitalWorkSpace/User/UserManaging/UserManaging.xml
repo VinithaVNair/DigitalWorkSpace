@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UserManaging</name>
+    </assembly>
+    <members>
+        <member name="M:UserManaging.Controllers.UserManagingController.GetUser(System.String)">
+            <summary>
+            Gets user details by his/her user name
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UserManaging.Controllers.UserManagingController.AddUser(System.String)">
+            <summary>
+            Creates a user id for the user name
+            </summary>
+            <param name="userName">user name</param>
+            <returns></returns>
+        </member>
+        <member name="M:UserManaging.Controllers.UserManagingController.GetUsers">
+            <summary>
+            Gets user details by his/her user name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UserManaging.Core.Model.User.UserId">
+            <summary>
+            User id of the user
+            </summary>
+        </member>
+        <member name="P:UserManaging.Core.Model.User.UserName">
+            <summary>
+            User name of the user
+            </summary>
+        </member>
+    </members>
+</doc>

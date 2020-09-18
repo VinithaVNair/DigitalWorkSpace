@@ -1,0 +1,55 @@
+version: '3.5'
+services:
+  tinyurls:
+    image: tinyurls
+    container_name: tinyurlcontainer
+    ports:
+      - "8081:80"
+      - "44383:443"
+    networks:
+      - dws_network
+  users:
+    image: users
+    container_name: userscontainer
+    ports:
+      - "8082:80"
+      - "44384:443"
+    networks:
+      - dws_network
+  cards:
+    image: cards
+    container_name: cardscontainer
+    ports:
+      - "8083:80"
+      - "44385:443"
+    networks:
+      - dws_network
+  catalogs:
+    image: catalogs
+    container_name: catalogscontainer
+    ports:
+      - "8084:80"
+      - "44386:443"
+    networks:
+      - dws_network
+  dwsui:
+    image: dwsui
+    container_name: dwsuicontainer
+    ports:
+      - "4200:80"
+    networks:
+      - dws_network
+  api:
+    image: api
+    container_name: apigatewaycontainer
+    ports:
+      - "8085:80"
+      - "5000:5000"
+      - "44356:443"
+    networks:
+      - dws_network
+      
+networks:
+  dws_network:
+   external: true
+   

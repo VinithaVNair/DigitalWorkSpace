@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+  api:
+    image: api
+    container_name: apigatewaycontainer
+    ports:
+      - "5000:80"
+      - "44356:443"
+    networks:
+      - dws_network
+ 
+      
+networks:
+  dws_network:
+   external: true
+   

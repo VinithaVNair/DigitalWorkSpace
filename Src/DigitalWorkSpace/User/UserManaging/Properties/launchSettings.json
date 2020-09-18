@@ -1,0 +1,43 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:49530",
+      "sslPort": 44345
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "users",
+      "environmentVariables": {
+        "SwaggerName": "User Open Api",
+        "SwaggerEndpoint": "/swagger/UserOpenApiSpecification/swagger.json",
+        "UserDb": "server=localhost;Port=3306;database=userdb;uid=user;pwd=mysql",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "UserManaging": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "users",
+      "environmentVariables": {
+        "SwaggerName": "User Open Api",
+        "SwaggerEndpoint": "/swagger/UserOpenApiSpecification/swagger.json",
+        "UserDb": "server=localhost;Port=33010;database=userdb;uid=root;pwd=root",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/users",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}

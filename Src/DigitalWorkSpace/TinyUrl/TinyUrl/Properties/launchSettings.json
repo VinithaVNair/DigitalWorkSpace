@@ -1,0 +1,54 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:55265",
+      "sslPort": 44380
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "tinyurls",
+      "environmentVariables": {
+        "Key": "Value",
+        "UrlDeleted": "UrlDeleted",
+        "SwaggerName": "TinyUrl Api",
+        "Producer": "localhost:29092",
+        "SwaggerEndpoint": "/swagger/TinyUrlOpenApiSpecification/swagger.json",
+        "UrlDb": "server=localhost;Port=3306;database=urldb;uid=user;pwd=mysql",
+        "UrlLinked": "UrlLinked",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "GroupId": "UrlGroup"
+      }
+    },
+    "TinyUrl": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "tinyurls",
+      "environmentVariables": {
+        "Key": "Value",
+        "UrlDeleted": "UrlDeleted",
+        "SwaggerName": "TinyUrl Api",
+        "Producer": "localhost:29092",
+        "SwaggerEndpoint": "/swagger/TinyUrlOpenApiSpecification/swagger.json",
+        //"UrlDb": "server=localhost;Port=3306;database=urldb;uid=user;pwd=mysql",
+        "UrlDb": "server=localhost;Port=3307;database=urldb;uid=root;pwd=root",
+        "UrlLinked": "UrlLinked",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "GroupId": "UrlGroup"
+      },
+      "applicationUrl": "https://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/tinyurls",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}

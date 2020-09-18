@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  dwsui:
+    image: dwsui
+    container_name: dwsuicontainer
+    ports:
+      - "4200:80"
+    networks:
+      - dws_network      
+networks:
+  dws_network:
+   driver: bridge
+   name: dws_network
+   

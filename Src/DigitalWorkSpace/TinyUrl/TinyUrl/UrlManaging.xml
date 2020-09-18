@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UrlManaging</name>
+    </assembly>
+    <members>
+        <member name="M:UrlManaging.Controllers.TinyUrlsController.GetUrl(System.String)">
+            <summary>
+            Redirects to original url based on the input tinyUrl
+            </summary>
+            <param name="url">tinyUrl</param>
+            <returns></returns>
+        </member>
+        <member name="M:UrlManaging.Controllers.TinyUrlsController.GetUrls">
+            <summary>
+            Gets all the tiny urlCreated
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UrlManaging.Controllers.TinyUrlsController.CreateTinyUrl(UrlManaging.Core.Model.UrlInfo)">
+            <summary>
+            Create short url 
+            </summary>
+            <param name="originalUrl">Original url for which the tiny url needs to be created</param>
+            <returns>An action result of type TinyUrl</returns>
+        </member>
+        <member name="T:UrlManaging.Core.Model.TinyUrl">
+            <summary>
+            Tiny Url information
+            </summary>
+        </member>
+        <member name="P:UrlManaging.Core.Model.TinyUrl.ShortUrl">
+            <summary>
+            Tiny url representing original url
+            </summary>
+        </member>
+        <member name="P:UrlManaging.Core.Model.TinyUrl.OriginalUrl">
+            <summary>
+            original url
+            </summary>
+        </member>
+        <member name="P:UrlManaging.Core.Model.TinyUrl.Expiry">
+            <summary>
+            Expiry date of the url
+            </summary>
+        </member>
+        <member name="P:UrlManaging.Core.Model.TinyUrl.IsLinked">
+            <summary>
+            Linking information of url
+            </summary>
+        </member>
+        <member name="T:UrlManaging.Core.Model.UrlInfo">
+            <summary>
+            Input for url creation
+            </summary>
+        </member>
+        <member name="P:UrlManaging.Core.Model.UrlInfo.OriginalUrl">
+            <summary>
+            Original url for which tiny url needs to be created
+            </summary>
+        </member>
+        <member name="P:UrlManaging.Core.Model.UrlInfo.Expiry">
+            <summary>
+            Expiry date of the new url
+            </summary>
+        </member>
+    </members>
+</doc>

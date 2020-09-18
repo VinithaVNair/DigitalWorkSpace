@@ -1,0 +1,56 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:54505",
+      "sslPort": 44384
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "cards",
+      "environmentVariables": {
+        "Key": "Value",
+        "CardEdited": "CardEdited",
+        "SwaggerName": "Card Open Api",
+        "Producer": "localhost:29092",
+        "SwaggerEndpoint": "/swagger/CardOpenApiSpecification/swagger.json",
+        "UrlLinked": "UrlLinked",
+        "CardDb": "server=localhost;Port=3306;database=cardsdb;uid=user;pwd=mysql",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CardLinked": "CardLinked"
+      }
+    },
+    "CardManaging": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "cards",
+      "environmentVariables": {
+        "Key": "Value",
+        "CardEdited": "CardEdited",
+        "UrlGroupId": "CardUrlGroup",
+        "UrlDeleted": "UrlDeleted",
+        "SwaggerName": "Card Open Api",
+        "Producer": "localhost:29092",
+        "SwaggerEndpoint": "/swagger/CardOpenApiSpecification/swagger.json",
+        "UrlLinked": "UrlLinked",
+        "CardDb": "server=localhost;Port=3309;database=cardsdb;uid=root;pwd=root",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CardLinked": "CardLinked",
+        "GroupId": "CardGroup"
+      },
+      "applicationUrl": "https://localhost:5001"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/cards",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}

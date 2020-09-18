@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardManaging</name>
+    </assembly>
+    <members>
+        <member name="M:CardManaging.Controllers.CardsController.GetCards">
+            <summary>
+            Gets all the created cards
+            </summary>
+            <returns>An Action Result of list of Cards</returns>
+        </member>
+        <member name="M:CardManaging.Controllers.CardsController.GetCard(System.Int32,System.Int32)">
+            <summary>
+            Gets cards by its id
+            will result all the version of the card
+            can filter with version as well
+            </summary>
+            <param name="id">id of the card</param>
+            <param name="version">version of the card</param>
+            <returns>An Action Result of list of Cards</returns>
+        </member>
+        <member name="M:CardManaging.Controllers.CardsController.CreateCard(CardManaging.Core.Model.Card)">
+            <summary>
+            Create card
+            </summary>
+            <param name="card"></param>
+            <returns>An Action Result of type</returns>
+        </member>
+        <member name="M:CardManaging.Controllers.CardsController.EditCard(CardManaging.Core.Model.EditedCard)">
+            <summary>
+            Edit the card
+            </summary>
+            <param name="card">Card which needs to be edited</param>
+            <returns>An Action Result of type card</returns>
+        </member>
+        <member name="P:CardManaging.Core.Model.Card.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.Card.Version">
+            <summary>
+            Version
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.Card.ShortUrl">
+            <summary>
+            ShortUrl to which it is linked
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.Card.ImageContent">
+            <summary>
+            favicon of the card
+            </summary>    
+        </member>
+        <member name="P:CardManaging.Core.Model.Card.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.Card.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.Card.Favicon">
+            <summary>
+            Default favicon url
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.Card.IsLinked">
+            <summary>
+            Linking information of the card
+            if linked to any catalog then true
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.EditedCard.Id">
+            <summary>
+            Id of the original card which is being edited
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.EditedCard.Version">
+            <summary>
+            current version of the card before edit
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.EditedCard.ImageContent">
+            <summary>
+            favicon of the edited card if any
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.EditedCard.Title">
+            <summary>
+            Title of the card
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.EditedCard.Description">
+            <summary>
+            Description of the card
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.LinkedCard.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.LinkedCard.Version">
+            <summary>
+            version
+            </summary>
+        </member>
+        <member name="P:CardManaging.Core.Model.LinkedCard.CatalogId">
+            <summary>
+            Catalog to which it is linked
+            </summary>
+        </member>
+    </members>
+</doc>

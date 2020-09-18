@@ -1,0 +1,36 @@
+version: '3.5'
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:5.5.1
+    container_name: MY_ZOOKEEPER
+    ports:
+      - "2181:2181"
+    networks:
+      - dws_network
+    environment:
+      - ZOOKEEPER_CLIENT_PORT=2181
+  kafka:
+    image: confluentinc/cp-kafka:5.5.1
+    container_name: MYKAFKA
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+      - "29094:29094"
+    networks:
+      - dws_network
+    environment:
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_LISTENERS=LISTENER_INTERNAL://MYKAFKA:9092,LISTENER_HOST://MYKAFKA:29092,LISTENER_EXTERNAL://MYKAFKA:29094
+      - KAFKA_ADVERTISED_LISTENERS=LISTENER_INTERNAL://MYKAFKA:9092,LISTENER_HOST://localhost:29092,LISTENER_EXTERNAL://ALWAYSKFKA:29094
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=LISTENER_INTERNAL:PLAINTEXT,LISTENER_HOST:PLAINTEXT,LISTENER_EXTERNAL:PLAINTEXT
+      - KAFKA_INTER_BROKER_LISTENER_NAME=LISTENER_INTERNAL
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_AUTO_CREATE_TOPIC_ENABLE=true
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=1
+    depends_on:
+      - zookeeper      
+networks:
+  dws_network:
+   driver: bridge
+   name: dws_network
+   
