@@ -39,15 +39,6 @@ services:
       - "4200:80"
     networks:
       - dws_network
-  api:
-    image: api
-    container_name: apigatewaycontainer
-    ports:
-      - "8085:80"
-      - "5000:5000"
-      - "44356:443"
-    networks:
-      - dws_network
       
 networks:
   dws_network:

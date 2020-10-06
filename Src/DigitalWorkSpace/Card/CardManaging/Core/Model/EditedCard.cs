@@ -36,5 +36,10 @@ namespace CardManaging.Core.Model
         /// </summary>
         [Required]
         public string Description { get; set; }
+
+        /// <summary>
+        /// Default favicon url
+        /// </summary>
+        public string Favicon { get; set; }
     }
 }

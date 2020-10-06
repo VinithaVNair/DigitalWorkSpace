@@ -27,6 +27,7 @@ export class CardEditComponent implements OnInit {
   public editVesion:number;
   public expiry:Date;
   public newCard:ICard;
+  public card:ICard;
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.editId = params['id'];
@@ -43,18 +44,19 @@ export class CardEditComponent implements OnInit {
       'version':this.editVesion,
       'imageContent': this.image?this.image.replace('data:image/png;base64,',''):null,
       'title':this.title,
-      'description':this.description
+      'description':this.description,
+      'favicon': this.card.favicon
     };
     this.cardService.EditCard(this.cardEditInput).subscribe(data=>this.onEditSuccessfull(data));
   }
 
   populateData(cards:ICard[])
   {
-    let card=cards[0];
-    this.editId=card.id;
-    this.editVesion=card.version;
-    this.title=card.title;
-    this.description=card.description;
+    this.card=cards[0];
+    this.editId=this.card.id;
+    this.editVesion=this.card.version;
+    this.title=this.card.title;
+    this.description=this.card.description;
     // if(card.imageContent != null)
     // {
     // this.image = 'data:image/png;base64,' + this.card.imageContent;  

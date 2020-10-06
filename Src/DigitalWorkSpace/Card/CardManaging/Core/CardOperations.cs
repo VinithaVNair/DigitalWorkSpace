@@ -99,7 +99,8 @@ namespace CardManaging.Core
             {
                 Title = edittedCard.Title,
                 Description = edittedCard.Description,
-                ImageContent = edittedCard.ImageContent
+                ImageContent = edittedCard.ImageContent,
+                Favicon = edittedCard.Favicon,
             };
             _cardContext.Card.Add(clonedCard);
             _cardContext.SaveChanges();

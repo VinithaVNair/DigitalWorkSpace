@@ -5,4 +5,5 @@
     imageContent : Blob;
     title :string;
     description : string;
+    favicon:string;
 }
