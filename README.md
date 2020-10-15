@@ -2,7 +2,7 @@
 A web application to create short Url and view them in form of cards and group it in a catalog if needed 
 
 
-Access the site at http://52.226.94.104:4200/ 
+Access the site at https://mydws.37765c6fd0e243519cff.eastus.aksapp.io/ 
 this is a fulfledge application which connects with 4 micro services in the backend
 
 
