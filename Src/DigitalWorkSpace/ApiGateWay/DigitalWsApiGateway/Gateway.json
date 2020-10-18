@@ -5,8 +5,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalogscontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/api/catalogs",
@@ -26,8 +26,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalogscontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/api/catalogs/{id}",
@@ -47,8 +47,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalogscontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/api/catalogs/{id}/{everything}",
@@ -68,8 +68,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalogscontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/api/catalogs/{id}/{everything}/{anything}",
@@ -89,8 +89,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tinyurlcontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5000
         }
       ],
       "UpstreamPathTemplate": "/api/tinyurls",
@@ -110,8 +110,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tinyurlcontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5000
         }
       ],
       "UpstreamPathTemplate": "/api/tinyurls/{everything}",
@@ -131,8 +131,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "cardscontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/cards",
@@ -152,8 +152,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "cardscontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/cards/{id}",
@@ -173,8 +173,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "userscontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5003
         }
       ],
       "UpstreamPathTemplate": "/api/users",
@@ -194,8 +194,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "userscontainer",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5003
         }
       ],
       "UpstreamPathTemplate": "/api/users/{userName}",
@@ -219,7 +219,7 @@
         {
           "Name": "Catalogs API",
           "Version": "v1",
-          "Url": "https://catalogscontainer:443/swagger/CatalogOpenApiSpecification/swagger.json"
+          "Url": "https://localhost:5002/swagger/CatalogOpenApiSpecification/swagger.json"
         }
       ]
     },
@@ -229,7 +229,7 @@
         {
           "Name": "TinyUrl API",
           "Version": "v1",
-          "Url": "https://tinyurlcontainer:443/swagger/TinyUrlOpenApiSpecification/swagger.json"
+          "Url": "https://localhost:5000/swagger/TinyUrlOpenApiSpecification/swagger.json"
         }
       ]
     },
@@ -239,7 +239,7 @@
         {
           "Name": "Cards API",
           "Version": "v1",
-          "Url": "https://cardscontainer:443/swagger/CardOpenApiSpecification/swagger.json"
+          "Url": "https://localhost:5001/swagger/CardOpenApiSpecification/swagger.json"
         }
       ]
     },
@@ -249,13 +249,13 @@
         {
           "Name": "Users API",
           "Version": "v1",
-          "Url": "https://userscontainer:443/swagger/UserOpenApiSpecification/swagger.json"
+          "Url": "https://localhost:5003/swagger/UserOpenApiSpecification/swagger.json"
         }
       ]
     }
   ],
   "GlobalConfiguration": {
-   "BaseUrl": "https://localhost:5000;"
+    "BaseUrl": "https://localhost:5010;"
   }
 
 }
