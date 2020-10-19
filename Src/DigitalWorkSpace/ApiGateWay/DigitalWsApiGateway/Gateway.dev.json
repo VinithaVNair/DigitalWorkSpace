@@ -1,0 +1,261 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/catalogs",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/catalogs",
+      "UpstreamHttpMethod": [ "POST", "GET", "OPTIONS" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "catalogs",
+      "SwaggerKey": "catalogs"
+    },
+    {
+      "DownstreamPathTemplate": "/catalogs/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/catalogs/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "catalogs",
+      "SwaggerKey": "catalogs"
+    },
+    {
+      "DownstreamPathTemplate": "/catalogs/{id}/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/catalogs/{id}/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE", "OPTIONS" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "catalogs",
+      "SwaggerKey": "catalogs"
+    },
+    {
+      "DownstreamPathTemplate": "/catalogs/{id}/{everything}/{anything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/catalogs/{id}/{everything}/{anything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE", "OPTIONS" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "catalogs",
+      "SwaggerKey": "catalogs"
+    },
+    {
+      "DownstreamPathTemplate": "/tinyurls",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/tinyurls",
+      "UpstreamHttpMethod": [ "POST", "GET", "OPTIONS" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "tinyurls",
+      "SwaggerKey": "tinyurls"
+    },
+    {
+      "DownstreamPathTemplate": "/tinyurls/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/tinyurls/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "tinyurls",
+      "SwaggerKey": "tinyurls"
+    },
+    {
+      "DownstreamPathTemplate": "/cards",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cards",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "PATCH", "OPTIONS" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "cards",
+      "SwaggerKey": "cards"
+    },
+    {
+      "DownstreamPathTemplate": "/cards/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cards/{id}",
+      "UpstreamHttpMethod": [ "GET", "PATCH", "OPTIONS" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "cards",
+      "SwaggerKey": "cards"
+    },
+    {
+      "DownstreamPathTemplate": "/users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/users",
+      "UpstreamHttpMethod": [ "POST", "GET", "OPTIONS" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "users",
+      "SwaggerKey": "users"
+    },
+    {
+      "DownstreamPathTemplate": "/users/{userName}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/users/{userName}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "ServiceName": "users",
+      "SwaggerKey": "users"
+    }
+
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "catalogs",
+      "Config": [
+        {
+          "Name": "Catalogs API",
+          "Version": "v1",
+          "Url": "https://localhost:5002/swagger/CatalogOpenApiSpecification/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "tinyurls",
+      "Config": [
+        {
+          "Name": "TinyUrl API",
+          "Version": "v1",
+          "Url": "https://localhost:5000/swagger/TinyUrlOpenApiSpecification/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "cards",
+      "Config": [
+        {
+          "Name": "Cards API",
+          "Version": "v1",
+          "Url": "https://localhost:5001/swagger/CardOpenApiSpecification/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "users",
+      "Config": [
+        {
+          "Name": "Users API",
+          "Version": "v1",
+          "Url": "https://localhost:5003/swagger/UserOpenApiSpecification/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5010;"
+  }
+
+}

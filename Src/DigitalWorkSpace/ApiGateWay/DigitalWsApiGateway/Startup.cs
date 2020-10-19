@@ -46,7 +46,7 @@ namespace DigitalWsApiGateway
 
             app.UseOcelot();
 
-             app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

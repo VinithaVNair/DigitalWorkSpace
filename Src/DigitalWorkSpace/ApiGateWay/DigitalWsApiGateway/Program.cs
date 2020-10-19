@@ -20,9 +20,10 @@ namespace DigitalWsApiGateway
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
                     webBuilder.UseStartup<Startup>();
                     webBuilder.ConfigureAppConfiguration(config =>
-                    config.AddJsonFile($"Gateway.json"));
+                    config.AddJsonFile($"Gateway.{env}.json"));
                 }).ConfigureLogging(logging=>logging.AddConsole());
     }
 }
